@@ -1,0 +1,203 @@
+@keyframes hintIn{
+    0%{
+        opacity: 0;
+        top: -100px;
+    }
+    10%{
+        opacity: 1;
+        top: 20px;
+    }
+    90%{
+        opacity: 1;
+        top: 20px;
+    }
+    100%{
+        opacity: 0;
+        top: -100px;
+    }
+}
+@keyframes searchEngineSelectO{
+    0%{
+        height: 0px;
+        padding: 0px;
+    }
+    100%{
+        height: 240px;
+        padding: 10px 0;
+    }
+}
+@keyframes searchEngineSelectC{
+    0%{
+        height: 240px;
+        padding: 10px 0;
+    }
+    100%{
+        height: 0px;
+        padding: 0px;
+    }
+}
+@keyframes BoxIn1{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+@keyframes BoxOut1{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: -100%;
+    }
+}
+@keyframes opacity1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes opacity0{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes contentIn{
+    0%{
+        top: 80%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+@keyframes contentOut{
+    0%{
+        top: -80%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+@keyframes contentOut1{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: 80%;
+    }
+}
+
+@keyframes deleteIn{
+    0%{
+        top: 30px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        top: -10px;
+        width: 25px;
+        height: 25px;
+        opacity: 1;
+    }
+}
+@keyframes delete-bookmark{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    75%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes deleteOut{
+    0%{
+        top: -10px;
+        width: 25px;
+        height: 25px;
+        opacity: 1;
+    }
+    100%{
+        top: -5px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+@keyframes setStyleIn{
+    0%{
+        right: -400px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+@keyframes setStyleOut{
+    0%{
+        right: 0px;
+    }
+    100%{
+        right: -400px;
+    }
+}
+@keyframes setStyleCardPack{
+    0%{
+        max-height: 600px;
+    }
+    100%{
+        max-height: 40px;
+    }
+}
+.setStyleCardPack{
+    animation: setStyleCardPack ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes setStyleCardOpen{
+    0%{
+        max-height: 40px;
+    }
+    100%{
+        max-height: 600px;
+    }
+}
+.setStyleCardOpen{
+    animation: setStyleCardOpen ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes setStyleHeadlineUnfold {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes setStyleHeadlinePack{
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes setStyleHeadlineOpen{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}

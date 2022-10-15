@@ -1,0 +1,1178 @@
+:root{
+    --themeColor: #1296db; /*主题色*/
+
+    --interfaceFontSize: 20px; /*界面字体大小*/
+    --interfaceFontColor: #000000; /*界面字体颜色*/
+    --interfaceBackgroundColor1: #ffffff; /*界面背景颜色1*/
+    --interfaceBackgroundColor2: #eeeeee; /*界面背景颜色2*/
+    --interfaceBordeRadius: 10px; /*界面圆角大小*/
+
+    --sidebarWidth: 50px; /*侧边栏宽度*/
+    --sidebarBlur: 5px; /*侧边栏磨砂效果*/
+    --sidebarFontSize: 12px; /*侧边栏文字大小*/
+    --sidebarIconSize: 30px; /*侧边栏图标大小*/
+    --sidebarBorderRadius: 5px; /*侧边栏圆角大小*/
+
+    --timeFontSize: 50px; /*时间文字大小*/
+    --dateFontSize: 20px; /*日期文字大小*/
+    --timeDateColor: white; /*时间日期文字颜色*/
+
+    --bookmarkFontSize: 14px; /*书签文字大小*/
+    --bookmarkFontColor: #000000; /*书签文字颜色*/
+    --bookmarkIconSize: 50px; /*书签图标大小*/
+    --bookmarkIconBordeRadius: 5px; /*书签图标圆角大小*/
+
+    --gridSize: 100px;
+}
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 700px;
+    height: 100vh;
+    overflow: hidden;
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+}
+#sidebar{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--sidebarWidth);
+    height: 100%;
+    border-top-right-radius: var(--sidebarBorderRadius);
+    border-bottom-right-radius: var(--sidebarBorderRadius);
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(var(--sidebarBlur));
+    backdrop-filter: blur(var(--sidebarBlur));
+    box-shadow: 2px 2px 10px 1px rgba(16, 16, 16, 0.645);
+    transition: 0.2s;
+}
+.user-Box{
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+#user-Img{
+    width: var(--sidebarIconSize);
+    height: var(--sidebarIconSize);
+    max-width: var(--sidebarWidth);
+    max-height: var(--sidebarWidth);
+    border-radius: 50%;
+    transition: 0.2s;
+}
+#user-Name{
+    margin-top: 5px;
+    max-width: var(--sidebarWidth);
+    font-size: var(--sidebarFontSize);
+    color: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+#classification-Box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebarWidth);
+    margin: 10px 0;
+    overflow: auto;
+    transition: 0.2s;
+}
+#classification-Box::-webkit-scrollbar {
+    display: none;
+}
+.classification{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+.classification:hover{
+    background-color: #00000030;
+}
+.classification-Img{
+    width: var(--sidebarIconSize);
+    height: var(--sidebarIconSize);
+    max-width: var(--sidebarWidth);
+    max-height: var(--sidebarWidth);
+    transition: 0.2s;
+    margin: 5px;
+}
+.classification-Name{
+    margin-bottom: 5px;
+    max-width: var(--sidebarWidth);
+    font-size: var(--sidebarFontSize);
+    color: var(--interfaceFontColor);
+    cursor: default;
+    transition: 0.2s;
+}
+.content-Area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+}
+.top-Box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 150px;
+    cursor: default;
+}
+#time{
+    margin-top: 40px;
+    font-size: var(--timeFontSize);
+    line-height: var(--timeFontSize);
+    color: var(--timeDateColor);
+    transition: 0.2s;
+}
+.date-Box{
+    display: flex;
+    margin: 10px 0;
+}
+.date-Box div{
+    margin: 0 5px;
+    font-size: var(--dateFontSize);
+    line-height: var(--dataFontSize);
+    color: var(--timeDateColor);
+    transition: 0.2s;
+}
+.search-Box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    border: 2px solid #888888;
+    border-radius: 25px;
+    background-color: var(--interfaceBackgroundColor2);
+    transition: 0.2s;
+}
+#search-Engine{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+#searchEngine-Img{
+    width: 25px;
+    height: 25px;
+    margin: 0 10px;
+}
+.searchEngine-Unfold{
+    width: 20px;
+    height: 20px;
+}
+.searchEngine-Unfold path{
+    fill: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+.searchEngine-Select-Box{
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 0;
+    padding: 0;
+    background-color: #88888850;
+    border-radius: var(--interfaceBordeRadius);
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    overflow: hidden;
+    transition: 0.2s;
+}
+.searchEngine-Select-Card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 40px;
+    cursor: pointer;
+    border-radius: var(--interfaceBordeRadius);
+    transition: 0.2s;
+}
+.searchEngine-Select-Card:hover{
+    background-color: #88888890;
+}
+.searchEngine-Select-Icon{
+    width: 30px;
+    height: 30px;
+}
+.searchEngine-Select-Name{
+    font-size: 15px;
+    color: #eee;
+}
+#search-Input{
+    width: 50vw;
+    margin: 5px 0;
+    font-size: var(--interfaceFontSize);
+    line-height: 35px;
+    border: none;
+    border-left: 2px solid #888888;
+    border-right: 2px solid #888888;
+    background-color: var(--interfaceBackgroundColor2);
+    color: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+#search-Input:focus-visible{
+    outline: none;
+}
+#search-Btn{
+    width: 70px;
+    height: 100%;
+    margin: 0 -2px;
+    font-size: var(--interfaceFontSize);
+    color: var(--interfaceFontColor);
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#search-Btn:hover{
+    color: var(--themeColor);
+}
+#bookmark-Content-Box{
+    overflow: hidden;
+    margin-top: 50px;
+    width: 80vw;
+    min-width: 500px;
+    height: 60vh;
+}
+.bookmark-Content{
+    position: relative;
+    top: 0;
+    display: grid;
+    grid-template-rows: repeat(auto-fill,var(--gridSize));
+    grid-template-columns: repeat(auto-fill,var(--gridSize));
+    align-content: flex-start;
+    width: 100%;
+    height: 60vh;
+    overflow: auto;
+    transition: 0.2s;
+}
+.bookmark{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.bookmark-2x2{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.bookmark-Img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--bookmarkIconSize);
+    height: var(--bookmarkIconSize);
+    border-radius: var(--bookmarkIconBordeRadius);
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.bookmarkImg path{
+    fill: var(--interfaceFontColor);
+}
+.bookmark-Img div{
+    background-color: var(--interfaceBordeRadius);
+    margin: 0 3px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+}
+.bookmark-Name{
+    font-size: var(--bookmarkFontSize);
+    line-height: var(--bookmarkFontSize);
+    color: var(--bookmarkFontColor);
+    margin-top: 5px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.hint{
+    position: absolute;
+    z-index: 999;
+    top: -100px;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    min-height: 50px;
+    margin: 0 -150px;
+    background-color: #eeeeee;
+    border: 4px solid var(--themeColor);
+    border-radius: var(--interfaceBordeRadius);
+    transition: 0.2s;
+}
+.hint-Content{
+    margin: 10px 50px;
+    text-align: center;
+    font-weight: bold;
+}
+#set-Style{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000050;
+    transition: 0.2s;
+}
+.set-Style-Box{
+    position: fixed;
+    z-index: 1;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--interfaceBackgroundColor1);
+    border-top-left-radius: var(--interfaceBordeRadius);
+    border-bottom-left-radius: var(--interfaceBordeRadius);
+    overflow: auto;
+    transition: 0.2s;
+}
+.set-Style-Card{
+    width: 350px;
+    max-height: 40px;
+    margin: 5px 25px;
+    background-color: var(--interfaceBackgroundColor2);
+    border-radius: var(--interfaceBordeRadius);
+    overflow: hidden;
+    transition: 0.2s;
+}
+.set-Style-Card-Headline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    cursor: pointer;
+}
+.set-Style-Card-Text{
+    margin-left: 20px;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    color: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+.set-Style-Card-Icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.set-Style-Card-Icon path{
+    fill: var(--themeColor);
+    transition: 0.2s;
+}
+.set-Style-Content{
+    width: 350px;
+    margin-top: 20px;
+}
+#wallpaper-Box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 350px;
+    max-height: 500px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+#wallpaper-Box::-webkit-scrollbar {
+    display: none;
+}
+.wallpaper{
+    width: 160px;
+    height: 90px;
+    margin: 5px;
+    border-radius: var(--interfaceBordeRadius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#addBtn-Wallpaper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 90px;
+    margin: 5px;
+    border-radius: var(--interfaceBordeRadius);
+    background-color: #88888850;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#addBtn-Wallpaper:hover{
+    background-color: #88888880;
+}
+#addBtn-Wallpaper img{
+    width: 60px;
+    height: 60px;
+}
+.set-Style-Content-Card{
+    width: 330px;
+    margin: 20px 10px;
+}
+.set-Style-Content-Headline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    color: var(--interfaceFontColor);
+    transition: 0.2s;
+    cursor: default;
+}
+.set-Style-Content-Text{
+    font-size: var(--interfaceFontSize);
+    color: var(--themeColor);
+    transition: 0.2s;
+}
+.set-Style-Content-Input{
+    width: 300px;
+    margin: 5px 15px;
+}
+#themeColor-Show{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--themeColor);
+    transition: 0.2s;
+}
+.set-Style-Content-Color-Selection-Box{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 300px;
+}
+.set-Style-themeColor{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--clr);
+    border: 3px solid #888888;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.set-Style-themeColor:hover{
+    border: 3px solid var(--themeColor);
+}
+.set-Style-Content-Switch-Box{
+    width: 50px;
+    height: 30px;
+    background-color: var(--interfaceFontColor);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.set-Style-Content-Switch{
+    position: relative;
+    width: 26px;
+    height: 26px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: var(--interfaceBackgroundColor2);
+    transition: 0.2s;
+}
+.set-Style-Content-BtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    margin: 10px 0;
+}
+.set-Style-Content-Btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    color: var(--interfaceFontColor);
+    border-radius: var(--interfaceBordeRadius);
+    border: 3px solid var(--clr);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.set-Style-Content-Btn:hover{
+    background-color: var(--clr);
+}
+.localCacheClearing-Text{
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    cursor: default;
+}
+.localCacheClearing-Btn{
+    width: 140px;
+    height: 30px;
+    border-radius: var(--interfaceBordeRadius);
+    border: 2px solid var(--themeColor);
+    color: var(--bookmarkFontColor);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.localCacheClearing-Btn:hover{
+    background-color: var(--themeColor);
+}
+#AddIcon-Box{
+    position: absolute;
+    z-index: 3;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000050;
+}
+.AddIcon{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    border-radius: var(--interfaceBordeRadius);
+    background-color: var(--interfaceBackgroundColor1);
+    transition: 0.2s;
+}
+.AddIcon-Headline-Box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+#AddIcon-Headline{
+    height: 30px;
+    margin-left: 10px;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    color: var(--interfaceFontColor);
+    cursor: default;
+    transition: 0.2s;
+}
+#AddIcon-Close{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#AddIcon-Close path{
+    fill: var(--interfaceFontColor);
+}
+.AddIcon-UrlBox{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+#AddIcon-UrlBox-Text{
+    margin-left: 20px;
+    font-size: var(--interfaceFontSize);
+    color: var(--interfaceFontColor);
+    font-weight: bold;
+    cursor: default;
+}
+#AddIcon-Input{
+    flex: 1;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 30px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: var(--interfaceFontSize);
+    background-color: var(--interfaceBackgroundColor2);
+    color: var(--interfaceFontColor);
+}
+.icon-Preview{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+#icon-Preview-Text{
+    width: 100px;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    margin-left: 20px;
+    transition: 0.2s;
+    cursor: default;
+    transition: 0.2s;
+}
+#icon-Preview-Icon{
+    height: 90px;
+    margin-right: 100px;
+}
+.AddIcon-BtnBox{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    margin-top: 50px;
+}
+.AddIcon-Btn{
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    line-height: 40px;
+    color: var(--interfaceFontColor);
+    border: 3px solid var(--clr);
+    border-radius: var(--interfaceBordeRadius);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.AddIcon-Btn:hover{
+    background-color: var(--clr);
+}
+#add-Classification{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #00000030;
+}
+.add-Classification-Box{
+    position: relative;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    background-color: var(--interfaceBackgroundColor2);
+    border-radius: var(--interfaceBordeRadius);
+    transition: 0.2s;
+}
+.title-Box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+.add-Classification-BoxP{
+    margin: 10px 20px;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    color: var(--interfaceFontColor);
+    cursor: default;
+    transition: 0.2s;
+}
+#add-Classification-Close{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#add-Classification-Close path{
+    fill: var(--interfaceFontColor);
+}
+.add-Classification-NameBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 40px;
+    font-size: var(--interfaceFontSize);
+    color: var(--interfaceFontColor);
+    cursor: default;
+    transition: 0.2s;
+}
+#add-Classification-Name{
+    width: 200px;
+    height: 25px;
+    font-size: var(--interfaceFontSize);
+    background-color: var(--interfaceBackgroundColor2);
+    border: 2px solid #88888888;
+    border-radius: 8px;
+    color: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+.add-Classification-IconBox{
+    width: 600px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: var(--interfaceBordeRadius);
+    overflow: auto;
+    transition: 0.2s;
+}
+.add-Classification-IconGrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    width: 600px;
+    transition: 0.2s;
+}
+.add-Classification-Icon{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: var(--interfaceBordeRadius);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add-Classification-Icon:hover{
+    border: 2px solid var(--themeColor);
+}
+.add-Classification-Icon-Img{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+#add-Classification-AddIcon{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: var(--interfaceBordeRadius);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#add-Classification-AddIcon:hover{
+    fill: var(--themeColor);
+}
+.add-Classification-BtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+    height: 100px;
+}
+.add-Classification-Btn{
+    width: 120px;
+    height: 40px;
+    border-radius: var(--interfaceBordeRadius);
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    border: 3px solid var(--clr);
+    color: var(--interfaceFontColor);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add-Classification-Btn:hover{
+    background-color: var(--clr);
+}
+#add-Bookmark{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #00000030;
+    opacity: 0;
+}
+.add-BookmarkBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+    height: 650px;
+    background-color: var(--interfaceBackgroundColor1);
+    border-radius: var(--interfaceBordeRadius);
+    transition: 0.2s;
+}
+.add-BookmarkBox-HeadlineBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+.add-Bookmark-Headline-Text{
+    margin-left: 20px;
+    font-size: var(--interfaceFontSize);
+    color: var(--interfaceFontColor);
+    font-weight: bold;
+    cursor: default;
+    transition: 0.2s;
+}
+#add-Bookmark-Close{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+#add-Bookmark-Close path{
+    fill: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+.add-Bookmark-ContentBox{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 400px;
+    margin-top: 50px;
+    border-radius: var(--interfaceBordeRadius);
+    background-color: var(--interfaceBackgroundColor2);
+    transition: 0.2s;
+}
+.add-Bookmark-Set-Box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.add-Bookmark-Set{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+}
+.add-Bookmark-Set-Text{
+    margin-left: 40px;
+    font-size: var(--interfaceFontSize);
+    color: var(--interfaceFontColor);
+    font-weight: bold;
+    cursor: default;
+    transition: 0.2s;
+}
+.add-Bookmark-Set-Input{
+    flex: 1;
+    height: 50px;
+    margin: 5px 20px;
+    border-radius: 10px;
+    font-size: var(--interfaceFontSize);
+    background-color: var(--interfaceBackgroundColor2);
+    color: var(--interfaceFontColor);
+    transition: 0.2s;
+}
+#add-Bookmark-Set-BtnBox{
+    width: 100px;
+    margin: 20px 30px;
+    border: 3px solid var(--themeColor);
+    border-radius: var(--interfaceBordeRadius);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add-Bookmark-Set-Btn{
+    margin: 5px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+#add-Bookmark-Set-BtnBox:hover{
+    background-color: var(--themeColor);
+}
+.add-Bookmark-Set-Icon-Text{
+    margin-top: 20px;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    color: var(--interfaceFontColor);
+    cursor: default;
+    transition: 0.2s;
+}
+.add-Bookmark-Set-Icons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-top: 10px;
+    background-color: var(--interfaceBackgroundColor2);
+    overflow: auto;
+    transition: 0.2s;
+}
+.add-Bookmark-Set-Icon-Box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    height: 90px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: var(--interfaceFontSize);
+    cursor: pointer;
+    transition: 0.2s;
+}
+#bookmar-kSetIcon-Favicon{
+    display: none;
+}
+.add-Bookmark-Set-Icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid #88888888;
+    font-size: 20px;
+    font-weight: bold;
+    color: transparent;
+    letter-spacing: 2px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add-Bookmark-Set-Icon:hover{
+    border: 2px solid var(--themeColor);
+}
+.add-Bookmark-Set-Icon-Onclick{
+    width: 40px;
+    height: 40px;
+    margin: 10px 20px;
+    font-size: 14px;
+}
+#add-Bookmark-Set-Img{
+    width: 100%;
+    height: 100%;
+}
+.add-Bookmark-Set-Icon-Text-Box{
+    font-size: 20px;
+    cursor: default;
+}
+.text-Icon{
+    width: 100%;
+    margin-top: 20px;
+}
+#text-Icon-Input{
+    width: 80%;
+    padding: 5px;
+    border-radius: var(--interfaceBordeRadius);
+    font-size: var(--interfaceFontSize);
+    transition: 0.2s;
+}
+.text-Icon-Colour-Box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+}
+.text-Icon-Colour-Headline{
+    font-size: 17px;
+    cursor: default;
+}
+.text-Icon-Colour-Content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.text-Icon-Colour{
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: var(--clr);
+    border: 3px solid transparent;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 15px;
+    transition: 0.2s;
+}
+.text-Icon-Colour:hover{
+    border: 3px solid var(--themeColor);
+}
+.text-Icon-Colour-Onclick{
+    border: 3px solid var(--themeColor);
+}
+#add-Bookmark-Set-Icon{
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid #88888888;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#add-Bookmark-Set-Icon:hover{
+    fill: var(--themeColor);
+}
+#custom-Bookmark-Set-Icon:hover path{
+    transition: 0.2s;
+    fill: var(--themeColor);
+}
+.add-Bookmark-Btn-Box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+}
+.add-Bookmark-Btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    border: 2px solid var(--clr);
+    border-radius: var(--interfaceBordeRadius);
+    font-size: var(--interfaceFontSize);
+    color: var(--interfaceFontColor);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add-Bookmark-Btn:hover{
+    background-color: var(--clr);
+}
+.delete{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#compile-classification-Box{
+    position: absolute;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    width: 130px;
+    padding: 5px 0;
+    background-color: #00000060;
+    border-radius: var(--interfaceBordeRadius);
+    transition: 0.2s;
+}
+.compile-classification-Card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #eeeeee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.compile-classification-Card:hover{
+    color: var(--clr);
+}
+.compile-classification-Card:hover>.compile-classification-Card-Icon path{
+    fill: var(--clr);
+}
+.compile-classification-Card-Icon{
+    width: 20px;
+    height: 20px;
+    margin: 0 20px;
+}
+.compile-classification-Card-Icon path{
+    fill: #eeeeee;
+    transition: 0.2s;
+}
+.compile-classification-Card-Text{
+    font-size: 17px;
+    font-weight: bold;
+}
+#rightClick-Menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 120px;
+    padding: 5px 0;
+    background-color: #00000050;
+    border-radius: var(--interfaceFontSize);
+    transition: 0.2s;
+}
+.rightClick-Menu-Card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #eeeeee;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rightClick-Menu-Card:hover{
+    color: var(--clr);
+}
+.rightClick-Menu-Card:hover>.rightClick-Menu-Icon path{
+    fill: var(--clr);
+}
+.rightClick-Menu-Icon{
+    width: 18px;
+    height: 18px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.rightClick-Menu-Icon path{
+    transition: 0.2s;
+    fill: #eeeeee;
+}
+.rightClick-Menu-Text{
+    font-size: 16px;
+    font-weight: bold;
+}
+#importData{
+    position: absolute;
+    z-index: 5;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000030;
+}
+.importData-Box{
+    width: 600px;
+    height: 300px;
+    background-color: var(--interfaceBackgroundColor2);
+    border-radius: var(--interfaceBordeRadius);
+}
+.importData-Texe{
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--interfaceFontSize);
+}
+.importData-Btn-Box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 70px;
+}
+.importData-Btn{
+    width: 150px;
+    height: 45px;
+    border-radius: var(--interfaceBordeRadius);
+    text-align: center;
+    font-size: var(--interfaceFontSize);
+    font-weight: bold;
+    line-height: 45px;
+    color: var(--clr);
+    border: 3px solid var(--clr);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.importData-Btn:hover{
+    color: var(--interfaceBackgroundColor2);
+    background-color: var(--clr);
+}

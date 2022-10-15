@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC新起始页</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="user-Box">
+            <img id="user-Img" src="./images/icon/user.svg">
+            <div id="user-Name">登录</div>
+        </div>
+        <div id="classification-Box">
+            <div id="add-Classification-Btn" class="classification">
+                <img class="classification-Img" style="margin-bottom: 5px;" src="./images/icon/add.svg">
+            </div>
+        </div>
+        <div id="style" class="classification" style="margin-bottom: 50px;cursor: pointer;">
+            <img class="classification-Img" src="./images/icon/style.svg">
+        </div>
+    </div>
+    <div class="content-Area">
+        <div class="top-Box">
+            <div id="time">00 : 00</div>
+            <div class="date-Box">
+                <div id="date">**月**日</div>
+                <div id="period">星期*</div>
+                <div id="year">****年</div>
+            </div>
+        </div>
+        <div class="search-Box">
+            <div id="search-Engine">
+                <img id="searchEngine-Img" src="./images/icon/baidu.svg">
+                <svg class="searchEngine-Unfold" viewBox="0 0 1463 1024" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M259.24681641 225.90199588h747.48832084a33.55268363 33.55268363 0 0 1 25.28726655 55.56651743L658.27824338 711.18837043a33.55268363 33.55268363 0 0 1-50.49269711 0L234.04138584 281.4685133A33.55268363 33.55268363 0 0 1 259.24681641 225.82015992z"></path>
+                </svg>
+            </div>
+            <div id="search-Engine-Select" class="searchEngine-Select-Box">
+                <div class="searchEngine-Select-Card" title="https://www.sogou.com/web?query=">
+                    <img class="searchEngine-Select-Icon" src="./images/icon/sogou.svg">
+                    <div class="searchEngine-Select-Name">搜狗</div>
+                </div>
+                <div class="searchEngine-Select-Card" title="https://www.baidu.com/s?ie=utf8&oe=utf8&tn=98010089_dg&ch=11&wd=">
+                    <img class="searchEngine-Select-Icon" src="./images/icon/baidu.svg">
+                    <div class="searchEngine-Select-Name">百度</div>
+                </div>
+                <div class="searchEngine-Select-Card" title="https://cn.bing.com/search?q=">
+                    <img class="searchEngine-Select-Icon" src="./images/icon/bing.svg">
+                    <div class="searchEngine-Select-Name">必应</div>
+                </div>
+                <div class="searchEngine-Select-Card" title="https://www.google.com.hk/search?q=">
+                    <img class="searchEngine-Select-Icon" src="./images/icon/google.svg">
+                    <div class="searchEngine-Select-Name">谷歌</div>
+                </div>
+                <div class="searchEngine-Select-Card" title="https://s.weibo.com/weibo?q=">
+                    <img class="searchEngine-Select-Icon" src="./images/icon/weiBo.svg">
+                    <div class="searchEngine-Select-Name">微博</div>
+                </div>
+                <div class="searchEngine-Select-Card" title="https://www.zhihu.com/signin?next=">
+                    <img class="searchEngine-Select-Icon" src="./images/icon/zhiHu.svg">
+                    <div class="searchEngine-Select-Name">知乎</div>
+                </div>
+            </div>
+            <input id="search-Input" type="text" spellcheck="false" placeholder="搜索输入框"/>
+            <div id="search-Btn">搜索</div>
+        </div>
+        <div id="bookmark-Content-Box">
+        </div>
+    </div>
+    <div id="set-Style">
+        <div id="off-SetStyle-Box" style="flex: 1;z-index: 1;"></div>
+        <div class="set-Style-Box">
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">用户</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>
+                <div class="set-Style-Content"></div>
+            </div>
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">壁纸</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>
+                <div class="set-Style-Content">
+                    <div id="wallpaper-Box">
+                        <img class="wallpaper" src="./images/background/1.jpg"></img>
+                        <img class="wallpaper" src="./images/background/2.jpg"></img>
+                        <img class="wallpaper" src="./images/background/3.jpg"></img>
+                        <img class="wallpaper" src="./images/background/4.jpg"></img>
+                        <img class="wallpaper" src="./images/background/5.jpg"></img>
+                        <div id="addBtn-Wallpaper">
+                            <img src="./images/icon/add.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">界面设置</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>
+                <div class="set-Style-Content">
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            界面字体大小:
+                            <div id="interface-FontSize-Text" class="set-Style-Content-Text">20px</div>
+                        </div>
+                        <input id="interface-FontSize-input" class="set-Style-Content-Input" type="range" min="12" max="25" value="20"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            界面圆角大小:
+                            <div id="interface-BordeRadius-Text" class="set-Style-Content-Text">10px</div>
+                        </div>
+                        <input id="interface-BordeRadius-Input" class="set-Style-Content-Input" type="range" min="2" max="30" value="10"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            主题色:
+                            <div id="themeColor-Show"></div>
+                        </div>
+                        <div class="set-Style-Content-Color-Selection-Box">
+                            <div class="set-Style-themeColor" style="--clr: #000000"></div>
+                            <div class="set-Style-themeColor" style="--clr: #eeeeee"></div>
+                            <div class="set-Style-themeColor" style="--clr: #1296db"></div>
+                            <div class="set-Style-themeColor" style="--clr: #f03752"></div>
+                            <div class="set-Style-themeColor" style="--clr: #4CAF50"></div>
+                            <div class="set-Style-themeColor" style="--clr: #fcc515"></div>
+                        </div>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            深色模式
+                            <div id="darkMode" class="set-Style-Content-Switch-Box">
+                                <div id="darkModeHaft" class="set-Style-Content-Switch"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="interface-Style-Confirm" class="set-Style-Content-Btn" style="--clr: #4CAF50">保存</div>
+                        <div id="interface-Style-Reset" class="set-Style-Content-Btn" style="--clr: #f44336">重置</div>
+                    </div>
+                </div>
+            </div>
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">侧边栏设置</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>                                     
+                <div class="set-Style-Content">
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            侧边栏宽度:
+                            <div id="sidebarWidth-Text" class="set-Style-Content-Text">50px</div>
+                        </div>
+                        <input id="sidebarWidth-Input" class="set-Style-Content-Input" type="range" min="40" max="80" value="50"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            侧边栏圆角大小:
+                            <div id="sidebar-BorderRadius-Text" class="set-Style-Content-Text">5px</div>
+                        </div>
+                        <input id="sidebar-BorderRadius-Input" class="set-Style-Content-Input" type="range" min="0" max="20" value="5"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            侧边栏磨砂效果:
+                            <div id="sidebar-Blur-Text" class="set-Style-Content-Text">5px</div>
+                        </div>
+                        <input id="sidebar-Blur-Input" class="set-Style-Content-Input" type="range" min="0" max="12" value="5"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            侧边栏文字大小:
+                            <div id="sidebar-FontSize-Text" class="set-Style-Content-Text">12px</div>
+                        </div>
+                        <input id="sidebar-FontSize-Input" class="set-Style-Content-Input" type="range" min="8" max="20" value="12"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            侧边栏图标大小:
+                            <div id="sidebar-IconSize-Text" class="set-Style-Content-Text">30px</div>
+                        </div>
+                        <input id="sidebar-IconSize-Input" class="set-Style-Content-Input" type="range" min="20" max="70" value="30"/>
+                    </div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="sidebar-Style-Confirm" class="set-Style-Content-Btn" style="--clr: #4CAF50">保存</div>
+                        <div id="sidebar-Style-Reset" class="set-Style-Content-Btn" style="--clr: #f44336">重置</div>
+                    </div>
+                </div>
+            </div>
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">时间设置</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>
+                <div class="set-Style-Content">
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            时间文字大小:
+                            <div id="time-FontSize-Text" class="set-Style-Content-Text">50px</div>
+                        </div>
+                        <input id="time-FontSize-Input" class="set-Style-Content-Input" type="range" min="30" max="80" value="50"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            日期文字大小:
+                            <div id="date-FontSize-Text" class="set-Style-Content-Text">20px</div>
+                        </div>
+                        <input id="date-FontSize-Input" class="set-Style-Content-Input" type="range" min="15" max="30" value="20"/>
+                    </div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="time-Style-Confirm" class="set-Style-Content-Btn" style="--clr: #4CAF50">保存</div>
+                        <div id="time-Style-Reset" class="set-Style-Content-Btn" style="--clr: #f44336">重置</div>
+                    </div>
+                </div>
+            </div>
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">书签设置</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>
+                <div class="set-Style-Content">
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            书签文字大小:
+                            <div id="bookmark-FontSize-Text" class="set-Style-Content-Text">14px</div>
+                        </div>
+                        <input id="bookmark-FontSize-Input" class="set-Style-Content-Input" type="range" min="8" max="20" value="14"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            书签图标大小:
+                            <div id="bookmark-IconSize-Text" class="set-Style-Content-Text">50px</div>
+                        </div>
+                        <input id="bookmark-IconSize-Input" class="set-Style-Content-Input" type="range" min="40" max="80" value="50"/>
+                    </div>
+                    <div class="set-Style-Content-Card">
+                        <div class="set-Style-Content-Headline">
+                            书签图标圆角大小:
+                            <div id="bookmark-Icon-BordeRadius-Text" class="set-Style-Content-Text">5px</div>
+                        </div>
+                        <input id="bookmark-Icon-BordeRadius-Input" class="set-Style-Content-Input" type="range" min="0" max="40" value="5"/>
+                    </div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="bookmark-Style-Confirm" class="set-Style-Content-Btn" style="--clr: #4CAF50">保存</div>
+                        <div id="bookmark-Style-Reset" class="set-Style-Content-Btn" style="--clr: #f44336">重置</div>
+                    </div>
+                </div>
+            </div>
+            <div class="set-Style-Card">
+                <div class="set-Style-Card-Headline">
+                    <div class="set-Style-Card-Text">备份管理</div>
+                    <svg class="set-Style-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z"></path>
+                    </svg>
+                </div>
+                <div class="set-Style-Content">
+                    <div class="localCacheClearing-Text">注意：系统默认的设置及图片不会被清空</div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="bookmarks-Clearing" class="localCacheClearing-Btn">清空侧边栏及书签</div>
+                        <div id="icon-Clearing" class="localCacheClearing-Btn">清空侧边栏图标</div>
+                    </div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="style-Clearing" class="localCacheClearing-Btn">重置设置</div>
+                        <div id="wallpaper-Clearing" class="localCacheClearing-Btn">清空壁纸</div>
+                    </div>
+                    <div class="set-Style-Content-BtnBox">
+                        <div id="export-LocalStorage" class="localCacheClearing-Btn">导出缓存</div>
+                        <div id="Import-LocalStorage" class="localCacheClearing-Btn">导入缓存</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="AddIcon-Box">
+        <div class="AddIcon">
+            <div class="AddIcon-Headline-Box">
+                <div id="AddIcon-Headline"></div>
+                <svg id="AddIcon-Close" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M951.284349 1023.999269a73.142805 73.142805 0 0 1-51.931391-21.211414l-877.713659-877.713659A73.142805 73.142805 0 0 1 125.502082 21.211413l877.713659 877.713659A73.142805 73.142805 0 0 1 951.284349 1023.999269z"></path>
+                    <path d="M73.570691 1023.999269a73.142805 73.142805 0 0 1-51.931392-125.074197l877.713659-877.713659A73.142805 73.142805 0 0 1 1002.484313 124.342768l-877.713659 877.713659a73.142805 73.142805 0 0 1-51.199963 21.942842z"></path>
+                </svg>
+            </div>
+            <div class="AddIcon-UrlBox">
+                <div id="AddIcon-UrlBox-Text">网络图标地址：</div>
+                <input id="AddIcon-Input" type="text" value="" spellcheck="false" placeholder="请填写完整的网络地址">
+            </div>
+            <div class="icon-Preview">
+                <div id="icon-Preview-Text"></div>
+                <img id="icon-Preview-Icon"></img>
+            </div>
+            <div class="AddIcon-BtnBox">
+                <div id="AddIcon-Confirm" class="AddIcon-Btn" style="--clr: #4CAF50">确认</div>
+                <div id="AddIcon-Reset" class="AddIcon-Btn" style="--clr: #f44336">重置</div>
+            </div>
+        </div>
+    </div>
+    <div id="add-Classification">
+        <div class="add-Classification-Box">
+            <div class="title-Box">
+                <p class="add-Classification-BoxP">添加分类</p>
+                <svg id="add-Classification-Close" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M951.284349 1023.999269a73.142805 73.142805 0 0 1-51.931391-21.211414l-877.713659-877.713659A73.142805 73.142805 0 0 1 125.502082 21.211413l877.713659 877.713659A73.142805 73.142805 0 0 1 951.284349 1023.999269z"></path>
+                    <path d="M73.570691 1023.999269a73.142805 73.142805 0 0 1-51.931392-125.074197l877.713659-877.713659A73.142805 73.142805 0 0 1 1002.484313 124.342768l-877.713659 877.713659a73.142805 73.142805 0 0 1-51.199963 21.942842z"></path>
+                </svg>
+            </div>
+            <div class="add-Classification-NameBox">
+                名称：
+                <input id="add-Classification-Name" type="text" value="" spellcheck="false" placeholder="请填写分类名称"/>
+            </div>
+            <div class="add-Classification-IconBox">
+                <div class="add-Classification-IconGrid">
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/game.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/tool.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/heart.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/collect.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/money.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/smiling.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/document.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/link.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/menu.svg">
+                    </div>
+                    <div class="add-Classification-Icon">
+                        <img class="add-Classification-Icon-Img" src="./images/icon/folder.svg">
+                    </div>
+                    <svg id="add-Classification-AddIcon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M821.364 962h-618.75C123.864 962 62 900.114 62 821.364v-618.75c0-78.75 61.864-140.635 140.614-140.635h618.75c78.75 0 140.636 61.885 140.636 140.635v618.75C962 900.114 900.114 962 821.364 962z m79.265-756.814c0-46.586-35.25-81.815-81.815-81.815H205.186c-46.843-0.214-84.557 34.758-83.165 82.393-0.128 14.4 1.35 613.05 1.35 613.05 0 46.565 35.25 81.815 81.815 81.815h613.628c46.565 0 81.815-35.25 81.815-81.815V205.186z m-173.55 347.657H552.843v174.236c0 16.95-13.736 30.685-30.686 30.685h-0.236a30.686 30.686 0 0 1-30.685-30.685V552.843H296.92a30.686 30.686 0 0 1-30.685-30.686v-0.236c0-16.95 13.735-30.685 30.685-30.685h194.315V296.92c0-16.95 13.735-30.685 30.685-30.685h0.236c16.95 0 30.686 13.735 30.686 30.685v194.315h174.236c16.95 0 30.685 13.735 30.685 30.685v0.236c0 16.95-13.735 30.686-30.685 30.686z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="add-Classification-BtnBox">
+                <div id="add-Classification-Confirm" class="add-Classification-Btn" style="--clr: #4CAF50">确认</div>
+                <div id="add-Classification-Reset" class="add-Classification-Btn" style="--clr: #f44336">重置</div>
+            </div>
+        </div>
+    </div>
+    <div id="add-Bookmark">
+        <div class="add-BookmarkBox">
+            <div class="add-BookmarkBox-HeadlineBox">
+                <div class="add-Bookmark-Headline-Text">添加书签:</div>
+                <svg id="add-Bookmark-Close" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M951.284349 1023.999269a73.142805 73.142805 0 0 1-51.931391-21.211414l-877.713659-877.713659A73.142805 73.142805 0 0 1 125.502082 21.211413l877.713659 877.713659A73.142805 73.142805 0 0 1 951.284349 1023.999269z"></path>
+                    <path d="M73.570691 1023.999269a73.142805 73.142805 0 0 1-51.931392-125.074197l877.713659-877.713659A73.142805 73.142805 0 0 1 1002.484313 124.342768l-877.713659 877.713659a73.142805 73.142805 0 0 1-51.199963 21.942842z"></path>
+                </svg>
+            </div>
+            <div class="add-Bookmark-ContentBox">
+                <div class="add-Bookmark-SetBox">
+                    <div class="add-Bookmark-Set">
+                        <div class="add-Bookmark-Set-Text">书签URL:</div>
+                        <input id="add-Bookmark-Url" class="add-Bookmark-Set-Input" type="text" value="" spellcheck="false" placeholder="请输入完整的URL"/>
+                    </div>
+                    <div id="add-Bookmark-Set-BtnBox">
+                        <div class="add-Bookmark-Set-Btn">获取图片</div>
+                    </div>
+                    <div class="add-Bookmark-Set">
+                        <div class="add-Bookmark-Set-Text">书签名称:</div>
+                        <input id="add-Bookmark-Name" class="add-Bookmark-Set-Input" type="text" value="" spellcheck="false" placeholder="请输入名称"/>
+                    </div>
+                </div>
+                <div class="add-Bookmark-Set-Box">
+                    <div class="add-Bookmark-Set-Icon-Text">请选择书签图标:</div>
+                    <div class="add-Bookmark-Set-Icons">
+                        <div class="add-Bookmark-Set-Icon-Box">
+                            <div id="text-Icon-Content" class="add-Bookmark-Set-Icon"></div>
+                            <div class="add-Bookmark-Set-Icon-Text-Box">文字图标</div>
+                        </div>
+                        <div id="bookmark-Set-Icon-Favicon" style="display: none;" class="add-Bookmark-Set-Icon-Box">
+                            <div class="add-Bookmark-Set-Icon add-Bookmark-Set-Icon-Onclick">
+                                <img id="add-Bookmark-Set-Img" src="">
+                            </div>
+                            <div class="add-Bookmark-Set-Icon-Text-Box">网址图标</div>
+                        </div>
+                        <div id="custom-Bookmark-Set-Icon" class="add-Bookmark-Set-Icon-Box">
+                            <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M821.364 962h-618.75C123.864 962 62 900.114 62 821.364v-618.75c0-78.75 61.864-140.635 140.614-140.635h618.75c78.75 0 140.636 61.885 140.636 140.635v618.75C962 900.114 900.114 962 821.364 962z m79.265-756.814c0-46.586-35.25-81.815-81.815-81.815H205.186c-46.843-0.214-84.557 34.758-83.165 82.393-0.128 14.4 1.35 613.05 1.35 613.05 0 46.565 35.25 81.815 81.815 81.815h613.628c46.565 0 81.815-35.25 81.815-81.815V205.186z m-173.55 347.657H552.843v174.236c0 16.95-13.736 30.685-30.686 30.685h-0.236a30.686 30.686 0 0 1-30.685-30.685V552.843H296.92a30.686 30.686 0 0 1-30.685-30.686v-0.236c0-16.95 13.735-30.685 30.685-30.685h194.315V296.92c0-16.95 13.735-30.685 30.685-30.685h0.236c16.95 0 30.686 13.735 30.686 30.685v194.315h174.236c16.95 0 30.685 13.735 30.685 30.685v0.236c0 16.95-13.735 30.686-30.685 30.686z"></path>
+                            </svg>
+                            <div class="add-Bookmark-Set-Icon-Text-Box">自定义</div>
+                        </div>
+                    </div>
+                    <div class="text-Icon">
+                        <input id="text-Icon-Input" type="text" value="" spellcheck="false" placeholder="请输入图标文字"/>
+                        <div class="text-Icon-Colour-Box">
+                            <div class="text-Icon-Colour-Headline">背景颜色</div>
+                            <div id="text-Icon-BackgroundColor" class="text-Icon-Colour-Content">
+                                <div class="text-Icon-Colour" style="--clr: #983680"></div>
+                                <div class="text-Icon-Colour" style="--clr: #f03752"></div>
+                                <div class="text-Icon-Colour" style="--clr: #624941"></div>
+                                <div class="text-Icon-Colour" style="--clr: #f0a1a8"></div>
+                                <div class="text-Icon-Colour" style="--clr: #1296db"></div>
+                                <div class="text-Icon-Colour" style="--clr: #4CAF50"></div>
+                                <div class="text-Icon-Colour" style="--clr: #fcc515"></div>
+                                <div class="text-Icon-Colour" style="--clr: var(--themeColor)">#</div>
+                            </div>
+                        </div>
+                        <div class="text-Icon-Colour-Box">
+                            <div class="text-Icon-Colour-Headline">文字颜色</div>
+                            <div id="text-IconFont-Colour" class="text-Icon-Colour-Content">
+                                <div class="text-Icon-Colour" style="--clr: #000000"></div>
+                                <div class="text-Icon-Colour" style="--clr: #eeeeee"></div>
+                                <div class="text-Icon-Colour" style="--clr: #1296db"></div>
+                                <div class="text-Icon-Colour" style="--clr: #f03752"></div>
+                                <div class="text-Icon-Colour" style="--clr: #4CAF50"></div>
+                                <div class="text-Icon-Colour" style="--clr: #fcc515"></div>
+                                <div class="text-Icon-Colour" style="--clr: var(--themeColor)">#</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-Bookmark-Btn-Box">
+                <div id="add-Bookmark-Confirm" class="add-Bookmark-Btn" style="--clr: #4CAF50">确认</div>
+                <div id="add-Bookmark-Reset" class="add-Bookmark-Btn" style="--clr: #f44336">重置</div>
+            </div>
+        </div>
+    </div>
+    <div id="compile-classification-Box">
+        <div id="compile-classification" class="compile-classification-Card" style="--clr: var(--themeColor)">
+            <svg class="compile-classification-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path style="--clr: var(--themeColor)" d="M775.84 392.768l-155.2-172.352L160.768 643.264l-38.368 187.936 190.56-12.832zM929.952 229.952l-131.2-150.944-0.288-0.32a16 16 0 0 0-22.592-0.96l-131.168 120.576 155.168 172.352 128.832-118.464a15.936 15.936 0 0 0 1.248-22.24zM96 896h832v64H96z" ></path>
+            </svg>
+            <div class="compile-classification-Card-Text">编辑</div>
+        </div>
+        <div id="delete-classification" class="compile-classification-Card" style="--clr: #d81e06">
+            <svg class="compile-classification-Card-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path style="--clr: #d81e06" d="M507.904 52.224q95.232 0 179.2 36.352t145.92 98.304 98.304 145.408 36.352 178.688-36.352 179.2-98.304 145.92-145.92 98.304-179.2 36.352-178.688-36.352-145.408-98.304-98.304-145.92-36.352-179.2 36.352-178.688 98.304-145.408 145.408-98.304 178.688-36.352zM736.256 573.44q30.72 0 55.296-15.872t24.576-47.616q0-30.72-24.576-45.568t-55.296-14.848l-452.608 0q-30.72 0-56.32 14.848t-25.6 45.568q0 31.744 25.6 47.616t56.32 15.872l452.608 0z"></path>
+            </svg>
+            <div class="compile-classification-Card-Text">删除</div>
+        </div>
+    </div>
+    <div id="rightClick-Menu">
+        <div id="rightClick-Menu-Wallpaper" class="rightClick-Menu-Card" style="--clr: var(--themeColor)">
+            <svg class="rightClick-Menu-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path style="--clr: var(--themeColor)" d="M810.752 205.397333a213.333333 213.333333 0 0 1 213.333333 213.333334v128h-85.333333v-128a128 128 0 0 0-128-128h-768a42.666667 42.666667 0 0 1-24.746667-77.397334L316.586667 0l49.493333 69.461333-190.293333 135.936h634.88z m-597.333333 597.333334a213.333333 213.333333 0 0 1-213.333334-213.333334v-128h85.333334v128a128 128 0 0 0 128 128h768a42.666667 42.666667 0 0 1 24.746666 77.397334l-298.666666 213.333333-49.493334-69.461333 190.293334-135.936H213.333333z"></path>
+            </svg>
+            <div class="rightClick-Menu-Text">切换壁纸</div>
+        </div>
+        <div id="rightClick-Menu-Refresh" class="rightClick-Menu-Card" style="--clr: var(--themeColor)">
+            <svg class="rightClick-Menu-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path style="--clr: var(--themeColor)" d="M684.032 403.456q-17.408-8.192-15.872-22.016t11.776-22.016q3.072-2.048 19.968-15.872t41.472-33.28q-43.008-49.152-102.4-77.312t-129.024-28.16q-64.512 0-120.832 24.064t-98.304 66.048-66.048 98.304-24.064 120.832q0 63.488 24.064 119.808t66.048 98.304 98.304 66.048 120.832 24.064q53.248 0 100.864-16.896t87.04-47.616 67.584-72.192 41.472-90.624q7.168-23.552 26.624-38.912t46.08-15.36q31.744 0 53.76 22.528t22.016 53.248q0 14.336-5.12 27.648-21.504 71.68-63.488 132.096t-99.84 103.936-128.512 68.096-148.48 24.576q-95.232 0-179.2-35.84t-145.92-98.304-98.304-145.92-36.352-178.688 36.352-179.2 98.304-145.92 145.92-98.304 179.2-36.352q105.472 0 195.584 43.52t153.6 118.272q23.552-17.408 39.424-30.208t19.968-15.872q6.144-5.12 13.312-7.68t13.312 0 10.752 10.752 6.656 24.576q1.024 9.216 2.048 31.232t2.048 51.2 1.024 60.416-1.024 58.88q-1.024 34.816-16.384 50.176-8.192 8.192-24.576 9.216t-34.816-3.072q-27.648-6.144-60.928-13.312t-63.488-14.848-53.248-14.336-29.184-9.728z"></path>
+            </svg>
+            <div class="rightClick-Menu-Text">刷新</div>
+        </div>
+        <div id="rightClick-Menu-AddBookmark" class="rightClick-Menu-Card" style="--clr: var(--themeColor)">
+            <svg class="rightClick-Menu-Icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                <path style="--clr: var(--themeColor)" d="M768 85.333333a85.333333 85.333333 0 0 1 85.333333 85.333334v727.978666a42.666667 42.666667 0 0 1-62.677333 37.717334l-258.688-137.301334a42.666667 42.666667 0 0 0-40.021333 0L233.386667 936.32A42.666667 42.666667 0 0 1 170.666667 898.645333V170.666667a85.333333 85.333333 0 0 1 85.333333-85.333334h512z m0 85.333334H256v656.981333l195.925333-103.978667a128 128 0 0 1 111.872-3.968l8.149334 3.968L768 827.733333V170.666667z m-256 106.666666a42.666667 42.666667 0 0 1 42.666667 42.666667v85.333333h85.333333a42.666667 42.666667 0 0 1 0 85.333334h-85.333333v85.333333a42.666667 42.666667 0 0 1-85.333334 0v-85.333333H384a42.666667 42.666667 0 0 1 0-85.333334h85.333333v-85.333333a42.666667 42.666667 0 0 1 42.666667-42.666667z"></path>
+            </svg>
+            <div class="rightClick-Menu-Text">添加书签</div>
+        </div>
+        <div id="rightClick-Menu-Style" class="rightClick-Menu-Card" style="--clr: var(--themeColor)">
+            <svg class="rightClick-Menu-Icon" viewBox="0 0 1024 1024"  xmlns="http://www.w3.org/2000/svg">
+                <path style="--clr: var(--themeColor)" d="M372.134088 1004.846981a509.94041 509.94041 0 0 1-159.298198-76.821527l2.164315-103.514738a93.088793 93.088793 0 0 0-74.238313-93.088794l-101.536602-20.991523A509.428422 509.428422 0 0 1 0.011636 537.983409l82.243949-62.834935a93.088793 93.088793 0 0 0 26.507034-116.104998l-46.89348-92.390627A514.152678 514.152678 0 0 1 172.225904 128.415991l100.419536 25.133974a93.088793 93.088793 0 0 0 107.284834-51.664281l43.007023-94.252403a515.246472 515.246472 0 0 1 88.434354-7.610009c30.137497 0 59.669917 2.606486 88.411081 7.610009l43.007023 94.252403a93.088793 93.088793 0 0 0 107.284834 51.664281l100.396264-25.133974a514.152678 514.152678 0 0 1 110.356765 138.236858l-46.870208 92.390627a93.088793 93.088793 0 0 0 26.483762 116.104998l82.243949 62.834935a509.428422 509.428422 0 0 1-39.213654 172.44699l-101.51333 20.968251a93.088793 93.088793 0 0 0-74.238312 93.088793l2.141042 103.538011a509.94041 509.94041 0 0 1-159.298198 76.798255l-79.684007-66.279221a93.088793 93.088793 0 0 0-119.060567 0l-79.684007 66.302493zM511.348378 721.461421a209.449785 209.449785 0 1 0 0-418.89957 209.449785 209.449785 0 0 0 0 418.89957z"></path>
+            </svg>
+            <div class="rightClick-Menu-Text">设置</div>
+        </div>
+    </div>
+    <div id="importData">
+        <div class="importData-Box">
+            <div class="importData-Texe">检测到该文件为AC起始页的缓存数据<br>是否导入该数据？</div>
+            <div class="importData-Btn-Box">
+                <div id="importData-Confirm" class="importData-Btn" style="--clr: #4CAF50">确认</div>
+                <div id="importData-Reset" class="importData-Btn" style="--clr: #f44336">取消</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+</html>
